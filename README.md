@@ -35,7 +35,7 @@ encoder:
         resources:
             github.com/nvidia/tacotron2
             
-        initial setup:
+        setup:
             (make and activate tacotron2 virtual env.)
             git clone --recursive https://www.github.com/nvidia/tacotron2
             cd tacotron2
@@ -43,15 +43,15 @@ encoder:
             pip install torch==1.4.0 torchvision==0.5.0
             pip install -r req* numpy==1.16 numba==0.48 tensorboard==2.5.0
          
-         inference:
+        inference:
             .ipynb
             
          train:
             wget https://data.keithito.com/data/speech/LJSpeech-1.1.tar.bz2 (inside tacotron2 git cloned folder)
             tar -xvf *.tar.bz2
             sed -i -- 's,DUMMY,LJSpeech-1.1/wavs,g' filelists/*.txt
-            python train.py --output_directory=outdir --log_directory=logdir --hparams=fp16_run=True,batch_size=1 (uses apex optimizer,
-                increase batch size depending on your gpu vram)
+            python train.py --output_directory=outdir --log_directory=logdir --hparams=fp16_run=True,batch_size=1
+                (uses apex optimizer,increase batch size depending on your gpu vram)
         
 
 ```
