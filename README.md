@@ -35,8 +35,8 @@ tacotron2 - github.com/nvidia/tacotron2 (includes waveglow vocoder)
     cd tacotron2
     pip install torch==1.4.0 torchvision==0.5.0
     nano req*
-    (replace numpy==1.13.3 with numpy==1.16)
-    pip install -r req* numba==0.48
+    (delete numpy==1.13.3)
+    pip install -r req* numpy==1.16 numba==0.48
 
 
 
