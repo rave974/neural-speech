@@ -18,8 +18,7 @@ instructions:
         python3 -m venv <name>
         cd <name>
         source bin/activate
-        easy_install -U pip
-        pip install -U pip setuptools
+        pip install -U pip
 ```
 
 ```
@@ -40,8 +39,8 @@ encoder:
             git clone --recursive https://www.github.com/nvidia/tacotron2
             cd tacotron2
             (in requirements.txt, delete numpy==1.13.3 and tensorboard==1.15.0)
-            pip install torch==1.4.0 torchvision==0.5.0
-            pip install -r req* numpy==1.16 numba==0.48 tensorboard==2.5.0
+            pip install torch==1.4.0 torchvision==0.5.0 #cuda 10.1
+            pip install numpy==1.16 numba==0.48 tensorboard==2.5.0 -r req*
          
         inference:
             .ipynb
