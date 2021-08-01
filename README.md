@@ -11,7 +11,7 @@ complete instructions for tts/asr repos
 &emsp;&emsp;ubuntu 18.04.5 lts  
 &emsp;&emsp;&emsp;&emsp;sudo apt update;sudo apt upgrade -y  
 &emsp;&emsp;&emsp;&emsp;sudo apt install wget git python3 python3-pip python3-venv nvidia-driver-460 -y  
-&emsp;&emsp;&emsp;&emsp;cuda+cudnn
+&emsp;&emsp;&emsp;&emsp;(cuda+cudnn)
 
 **how to make v. env**   
 &emsp;&emsp;mkdir &lt;name&gt;  
