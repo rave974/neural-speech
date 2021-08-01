@@ -1,10 +1,11 @@
 
 complete instructions for tts/asr repos
 * [tts](#tts)
-  - [encoders](#encoders)
+  - [melspec generators](#melspec-generators)
      * [tacotron2](#tacotron2-nvidia)
   - [vocoders](#vocoders)
   - [end to end](#end-to-end)
+  - [seq to seq](#seq-to-seq)
 
 **first time set-up**  
 &emsp;&emsp;ubuntu 18.04.5 lts  
@@ -20,7 +21,7 @@ complete instructions for tts/asr repos
 &emsp;&emsp;cd &lt;name&gt;
 
 # tts
-## encoders
+## melspec. generators
 ### tacotron2 [nvidia](https://github.com/nvidia/tacotron2)
 &emsp;&emsp;(make v. env)  
 &emsp;&emsp;pip install torch==1.4.0 torchvision==0.5.0 #cuda 10.1  
