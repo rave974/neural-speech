@@ -16,7 +16,7 @@ complete instructions for tts/asr repos
 
 **index**
 - [encoders](#encoders)
-   * [tacotron2](#tacotron2)
+   * [tacotron2](#tacotron2-(nvidia))
 - [vocoders](#vocoders)
 
 ## encoders
