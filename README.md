@@ -9,12 +9,6 @@ complete instructions for tts/asr repos
 &emsp;&emsp;&emsp;&emsp;end to end  
 &emsp;&emsp;&emsp;&emsp;seq to seq  
 &emsp;&emsp;asr  
-&emsp;&emsp;extra  
-&emsp;&emsp;&emsp;&emsp;voice activity detection  
-&emsp;&emsp;&emsp;&emsp;voice amplifier  
-&emsp;&emsp;&emsp;&emsp;voice enhancement   
-&emsp;&emsp;&emsp;&emsp;voice separation  
-&emsp;&emsp;&emsp;&emsp;voice labeling  
 
 **first time set-up**  
 &emsp;&emsp;ubuntu 18.04.5 lts  
