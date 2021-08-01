@@ -15,15 +15,11 @@ complete instructions for tts/asr repos
 &emsp;&emsp;cd &lt;name&gt;
 
 **index**
-- [encoder](#blah)
-   * [Model architecture](#model-architecture)
-   * [Mixed precision training](#mixed-precision-training)
-      * [Enabling mixed precision](#enabling-mixed-precision)
-      * [Enabling TF32](#enabling-tf32)
-- [Setup](#setup)
-   * [Requirements](#requirements)
+- [encoders](#encoders)
+   * [tacotron2](#tacotron2)
+- [vocoders](#vocoders)
 
-## encoder
+## encoders
 ### tacotron2 ([nvidia](https://github.com/nvidia/tacotron2))
 &emsp;&emsp;(make v. env)  
 &emsp;&emsp;pip install torch==1.4.0 torchvision==0.5.0 #cuda 10.1  
@@ -44,4 +40,4 @@ complete instructions for tts/asr repos
 &emsp;&emsp;&emsp;&emsp;sed -i -- 's,DUMMY,LJSpeech-1.1/wavs,g' filelists/*.txt  
 &emsp;&emsp;&emsp;&emsp;python train.py --output_directory=outdir --log_directory=logdir --hparams=fp16_run=True,batch_size=1
 
-## blah
+## vocoders
