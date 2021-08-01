@@ -1,11 +1,20 @@
 
 complete instructions for tts/asr repos
-* [tts](#tts)
-  - [melspec generators](#melspec-generators)
-     * [tacotron2](#tacotron2-nvidia)
-  - [vocoders](#vocoders)
-  - [end to end](#end-to-end)
-  - [seq to seq](#seq-to-seq)
+
+**content**  
+&emsp;&emsp;tts  
+&emsp;&emsp;&emsp;&emsp;melspec generators  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;tacotron2 (nvidia)  
+&emsp;&emsp;&emsp;&emsp;vocoders  
+&emsp;&emsp;&emsp;&emsp;end to end  
+&emsp;&emsp;&emsp;&emsp;seq to seq  
+&emsp;&emsp;asr  
+&emsp;&emsp;extra  
+&emsp;&emsp;&emsp;&emsp;voice activity detection  
+&emsp;&emsp;&emsp;&emsp;voice amplifier  
+&emsp;&emsp;&emsp;&emsp;voice enhancement   
+&emsp;&emsp;&emsp;&emsp;voice separation  
+&emsp;&emsp;&emsp;&emsp;voice labeling  
 
 **first time set-up**  
 &emsp;&emsp;ubuntu 18.04.5 lts  
@@ -20,9 +29,7 @@ complete instructions for tts/asr repos
 &emsp;&emsp;pip install -U pip setuptools  
 &emsp;&emsp;cd &lt;name&gt;
 
-# tts
-## melspec. generators
-### tacotron2 [nvidia](https://github.com/nvidia/tacotron2)
+**tacotron2 ([nvidia](https://github.com/nvidia/tacotron2))**  
 &emsp;&emsp;(make v. env)  
 &emsp;&emsp;pip install torch==1.4.0 torchvision==0.5.0 #cuda 10.1  
 &emsp;&emsp;git clone https://github.com/NVIDIA/apex  
@@ -41,5 +48,3 @@ complete instructions for tts/asr repos
 &emsp;&emsp;&emsp;&emsp;tar -xvf *.tar.bz2  
 &emsp;&emsp;&emsp;&emsp;sed -i -- 's,DUMMY,LJSpeech-1.1/wavs,g' filelists/*.txt  
 &emsp;&emsp;&emsp;&emsp;python train.py --output_directory=outdir --log_directory=logdir --hparams=fp16_run=True,batch_size=1
-
-## vocoders
