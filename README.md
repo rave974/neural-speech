@@ -1,5 +1,10 @@
 
-complete instructions for tts/asr repos  
+complete instructions for tts/asr repos
+* [tts](#tts)
+  - [encoders](#encoders)
+     * [tacotron2](#tacotron2-nvidia)
+  - [vocoders](#vocoders)
+  - [end to end](#end-to-end)
 
 **first time set-up**  
 &emsp;&emsp;ubuntu 18.04.5 lts  
@@ -14,13 +19,9 @@ complete instructions for tts/asr repos
 &emsp;&emsp;pip install -U pip setuptools  
 &emsp;&emsp;cd &lt;name&gt;
 
-**index**
-- [encoders](#encoders)
-   * [tacotron2](#tacotron2-(nvidia))
-- [vocoders](#vocoders)
-
+# tts
 ## encoders
-### tacotron2 ([nvidia](https://github.com/nvidia/tacotron2))
+### tacotron2 [nvidia](https://github.com/nvidia/tacotron2)
 &emsp;&emsp;(make v. env)  
 &emsp;&emsp;pip install torch==1.4.0 torchvision==0.5.0 #cuda 10.1  
 &emsp;&emsp;git clone https://github.com/NVIDIA/apex  
