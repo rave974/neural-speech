@@ -68,10 +68,7 @@ python train.py --output_directory=outdir --log_directory=logdir
 ```
 python multiproc train.py --output_directory=outdir --log_directory=logdir --n_gpus <number of gpus>
 ```
-> continue training 
- > non-english language can be trained faster by continuing to train on english checkpoint
- > non-english continued checkpoint can be inferenced with english waveglow checkpoint
- > after 100 epochs good speech quality on a dataset with 3700wav files
+> continue training. non-english language can be trained faster by continuing to train on english checkpoint. non-english continued checkpoint can be inferenced with english waveglow checkpoint. after 100 epochs good speech quality on a dataset with 3700wav files  
 ```
 python multiproc train.py --output_directory=outdir --log_directory=logdir -c tacotron2_statedict.pt --warm_start
 ```
