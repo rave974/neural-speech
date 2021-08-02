@@ -32,6 +32,7 @@ cd name
 ```
 # (make v. env)
 pip install torch==1.4.0 torchvision==0.5.0 #cuda 10.1  
+export CUDA_HOME=/usr/local/cuda #if apex setup gives error
 git clone https://github.com/NVIDIA/apex  
 pip install --global-option="--cpp_ext" --global-option="--cuda_ext" ./apex  
 git clone https://www.github.com/nvidia/tacotron2  
