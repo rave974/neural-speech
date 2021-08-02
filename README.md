@@ -33,15 +33,17 @@ cd name
 [source](https://github.com/nvidia/tacotron2)
 ```
 # (make v. env)
-pip install torch==1.4.0 torchvision==0.5.0 #cuda 10.1  
+pip install torch==1.4.0 torchvision==0.5.0 #cuda 10.1
 export CUDA_HOME=/usr/local/cuda #if apex setup gives error
-git clone https://github.com/NVIDIA/apex  
-pip install --global-option="--cpp_ext" --global-option="--cuda_ext" ./apex  
-git clone https://www.github.com/nvidia/tacotron2  
-cd tacotron2  
-git submodule init; git submodule update  
+git clone https://github.com/NVIDIA/apex
+pip install --global-option="--cpp_ext" --global-option="--cuda_ext" ./apex
+git clone https://www.github.com/nvidia/tacotron2
+cd tacotron2
+git submodule init; git submodule update
 # (in requirements.txt delete numpy==1.13.3)
-pip install numpy==1.16 numba==0.48 tensorboard==2.5.0 -r req* jupyter  
+pip install numpy==1.16 numba==0.48 tensorboard==2.5.0 jupyter
+pip install -r req*
+
 ```  
 inference
 ```
