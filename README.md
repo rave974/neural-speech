@@ -60,11 +60,11 @@ sed -i -- 's,DUMMY,LJSpeech-1.1/wavs,g' filelists/*.txt
 ```
 > edit hparams.py (batch size, filelists location, amp, text cleaners)  
 > edit text/symbols.py (add symbols for trained language)  
-> train single gpu
+> single gpu
 ```
 python train.py --output_directory=outdir --log_directory=logdir
 ```
-> train multiple gpu
+> multiple gpu
 ```
 python multiproc train.py --output_directory=outdir --log_directory=logdir --n_gpus <number of gpus>
 ```
