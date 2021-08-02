@@ -52,13 +52,29 @@ inference
 # (adjust checkpoint paths and run)
 ```
 train
-> prepare dataset and filelists
+> prepare dataset and filelists (default test dataset)
 ```
 wget https://data.keithito.com/data/speech/LJSpeech-1.1.tar.bz2 (inside tacotron2 git cloned folder)   
 tar -xvf *.tar.bz2  
 sed -i -- 's,DUMMY,LJSpeech-1.1/wavs,g' filelists/*.txt 
 ```
-> train single gpu if you have 1 gpu
+> edit hparams.py (batch size, filelists location, amp, text cleaners)  
+> edit text/symbols.py (add symbols for trained language)  
+> train single gpu
 ```
-python train.py --output_directory=outdir --log_directory=logdir --hparams=fp16_run=True,batch_size=1
+python train.py --output_directory=outdir --log_directory=logdir
 ```
+> train multiple gpu
+```
+python multiproc train.py --output_directory=outdir --log_directory=logdir --n_gpus <number of gpus>
+```
+> continue training 
+ > non-english language can be trained faster by continuing to train on english checkpoint
+ > non-english continued checkpoint can be inferenced with english waveglow checkpoint
+ > after 100 epochs good speech quality on a dataset with 3700wav files
+```
+python multiproc train.py --output_directory=outdir --log_directory=logdir -c tacotron2_statedict.pt --warm_start
+```
+
+
+
