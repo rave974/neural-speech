@@ -2,14 +2,14 @@
 complete instructions for tts/asr repos  
 [donate](test)
 
-**content**  
-&emsp;&emsp;tts  
-&emsp;&emsp;&emsp;&emsp;melspec generators  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;tacotron2 (nvidia)  
-&emsp;&emsp;&emsp;&emsp;vocoders  
-&emsp;&emsp;&emsp;&emsp;end to end  
-&emsp;&emsp;&emsp;&emsp;seq to seq  
-&emsp;&emsp;asr  
+**content**
+- tts
+  * melspec generators
+    * tacotron2 (nvidia)
+  * vocoders
+    * end to end  
+    * seq to seq  
+- asr  
 
 **first time set-up (ubuntu 18.04.5 lts)**  
 ```
@@ -29,7 +29,8 @@ pip install -U pip setuptools
 cd name
 ```
 
-**[tacotron2 (nvidia)](https://github.com/nvidia/tacotron2)**
+**tacotron2 (nvidia)**  
+[source](https://github.com/nvidia/tacotron2)
 ```
 # (make v. env)
 pip install torch==1.4.0 torchvision==0.5.0 #cuda 10.1  
@@ -49,9 +50,13 @@ inference
 # (adjust checkpoint paths and run)
 ```
 train
+> prepare dataset and filelists
 ```
 wget https://data.keithito.com/data/speech/LJSpeech-1.1.tar.bz2 (inside tacotron2 git cloned folder)   
 tar -xvf *.tar.bz2  
-sed -i -- 's,DUMMY,LJSpeech-1.1/wavs,g' filelists/*.txt  
+sed -i -- 's,DUMMY,LJSpeech-1.1/wavs,g' filelists/*.txt 
+```
+> train single gpu if you have 1 gpu
+```
 python train.py --output_directory=outdir --log_directory=logdir --hparams=fp16_run=True,batch_size=1
 ```
