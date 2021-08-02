@@ -25,7 +25,7 @@ sudo apt install wget git python3 python3-pip python3-venv nvidia-driver-460 -y
 mkdir name
 python3.6 -m venv name/env  
 source name/env/bin/activate 
-pip install -U pip setuptools  
+pip install -U pip setuptools wheel  
 cd name
 ```
 
